@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html>
+	<head>
+	  <title>Angry Wipes!</title>
+    		<script src="phaser.min.js"></script>
+    		<script src="require.js"></script>
+    		<script src="src/boot.js"></script>
+		<script src="src/preload.js"></script>
+		<script src="src/gametitle.js"></script>
+		<script src="src/thegame.js"></script>
+		<script src="src/quiz1.js"></script>
+		<script src="src/gameover.js"></script>	
+    		<style>
+    			body{margin:0}
+    		</style>
+		<script>
+				var game = new Phaser.Game(1000, 600, Phaser.CANVAS, "game");
+				game.state.add("Boot",boot);
+				game.state.add("Preload",preload);
+				game.state.add("GameTitle",gameTitle);
+				game.state.add("TheGame",theGame);
+				game.state.add("quiz1", quiz1);
+				game.state.add("GameOver",gameOver);
+				game.state.start("Boot");  
+		</script>
+    </head>
+    <body>
+    </body>
+</html>

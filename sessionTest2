@@ -1,0 +1,14 @@
+<html>
+
+<body>
+
+<?php
+echo "sessiontest two";
+echo $_SESSION["bool"];
+
+?>
+
+<a href = "/sessionTest.php"> sessionTest two</a>
+
+</html>
+</body>

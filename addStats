@@ -1,0 +1,58 @@
+<html>
+<script>
+  if (document.referrer =="http://www.mysicu.com/games/wipeout/index.html") {
+  	
+  } else {
+  	       document.write("attempting to access this page from unauthorized source: " + document.referrer);
+   }
+  }
+  </script>
+  
+   <? include('dbc.php'); ?>
+    <link rel="stylesheet" href="styles.css">
+          
+<body>
+
+<div id="unitSelect" >
+         <form name = "myFirstForm" action = "" method = "post">
+
+ <select name = "unit" >
+  <option value="1E">1E rehab</option>
+  <option value="CLC">CLC</option>
+  <option value="2W">2W</option>
+  <option value="MICU">MICU</option>
+  <option value="SICU">SICU</option>
+</select>
+            <br />
+            <input type = "submit" value ="Submit" name = "UnitSelected"/>
+            <br />  
+</form>
+</div>
+
+<?php
+
+ if (isset($_POST["UnitSelected"])){
+$link = $dbc;
+
+if (!$link) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
+}
+
+echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
+
+$stmt = $link->prepare( "INSERT INTO `angry_wipes_test`(`unit`, `comp_date`) VALUES (?, CURDATE())");
+$stmt->bind_param("s", $_POST["unit"] );
+$stmt -> execute();
+
+mysqli_close();
+
+// redirect to stats page after adding to database.
+echo "<script> location.href='http://www.mysicu.com'; </script>";
+}
+?>  
+    </body>
+    </html>

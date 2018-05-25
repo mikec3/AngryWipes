@@ -1,0 +1,137 @@
+
+.statDisplay{
+border: 1px solid black;
+border-radius: 10%;
+width: 30em;
+height: 4em;
+margin: auto;
+margin-bottom: 2em;
+	/*text-align: center; */
+	background-color: #f4f6f7;
+}
+
+#t {
+display: inline-block;
+vertical-align: middle;
+margin-left: .5em;
+margin-top: 1.5em;	
+}
+#placing {
+	vertical-align: middle;
+	margin-left: 2em;
+	display: inline-block;
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+
+html, body {
+    height: 100%;
+    overflow:auto;
+}
+body #fixedElement {
+    position:fixed !important;
+    position: absolute; /*ie6 */
+    bottom: 0;
+    
+   /*border: 1px solid black; */
+   width: 200px;
+   height: 200px;
+}
+
+#unit {
+	vertical-align: middle;
+	margin-left: 1em;
+	display: inline-block;
+	font-size: 25px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#value {
+	vertical-align: middle;
+	margin-left: 1em;
+	display: inline-block;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#gameLink{
+text-align: center;
+color: white;
+margin-bottom: 5px;
+font-size: 20px;
+}
+
+.addStatContainer h1{
+/* margin: auto; */
+}
+
+#button{
+height: 150px;
+width: 200px;	
+font-size: 45px;
+margin-top: 20px;
+}
+
+.addStatContainer{
+		border: 1px solid black;	/*display border */
+height: 800px;
+display: flex;				/*enable contents to be flex. */
+flex-direction: column;
+    /*justify-content: center;	*/	/* center contents on screen */
+background-color: #c0cde2;
+border-radius: 2em;
+background-image: url("http://www.mysicu.com/games/wipeout/assets/bathroomBackgroundSink.png");
+}
+
+.addStatBox{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	
+	border: 1px solid black;
+	border-radius: 15%;
+	height: 400px;
+	width: 350px;
+	text-align: center;
+	
+background-color: #e0ddcc;
+}
+
+#image{
+	 background-repeat: no-repeat;
+ background-size: 100px;
+	height: 100px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	background-image: url("http://www.mysicu.com/games/wipeout/assets/singleToilet.png");
+}
+
+.unitSelect{
+	margin:auto;
+}
+
+.addStatContainer select{
+/* font-size: 2em;	
+margin-bottom: 2em; */
+margin-top: 40px;
+font-size: 25px;
+}
+.addStatContainer h1{
+margin-top: 30px;	
+}
+.container{
+	margin: 5px;
+	border: 1px solid black;	/*display border */
+	border-radius: 2em;
+	background-color: #dbdfe0;
+display: flex;				/*enable contents to be flex. */
+flex-direction: column;
+justify-content: center;		/* center contents on screen */
+overflow:hidden;
+background-image: url("http://www.mysicu.com/games/wipeout/assets/bathroomBackground.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+}
